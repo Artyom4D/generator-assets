@@ -1086,8 +1086,8 @@
             // SVGs use a different code path from the pixel-based formats
             if (component.extension === "svg") {
 
-                console.log("Creating SVG for layer " + changeContext.layer.id + " (" + component.name + ")");
-                var svgPromise = _generator.convertSVGFile(changeContext.layer.id, component.scale || 1);
+                console.log("Creating SVG for layer " + layer.id + " (" + component.name + ")");
+                var svgPromise = _generator.convertSVGFile(layer.id, component.scale || 1);
                 return svgPromise.then(
                     function (svgJSON) {
                         console.log("Received SVG text:\n" + decodeURI(svgJSON.svgText));
